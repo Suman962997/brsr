@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pdfplumber
+python-docx
+google-generativeai
+google-api-core
