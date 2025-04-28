@@ -476,6 +476,11 @@ def parse_brsr_text(json_merge):
     ]
   }
 
+@app.get("/k")
+def suman():
+    return {"message":"suman"}
+
+
 @app.post("/extract/" )
 async def extract_document(file: UploadFile = File(...)):
     if not (file.filename.endswith(".pdf" ) or file.filename.endswith(".docx" )):
