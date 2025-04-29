@@ -20,8 +20,7 @@ app = FastAPI(title="Document Extractor API" )
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://192.168.2.72:3000","http://localhost:3000","https://brsr-eight.vercel.app/"],
-    allow_credentials=True,
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
