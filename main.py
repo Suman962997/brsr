@@ -19,7 +19,8 @@ app = FastAPI()
 app = FastAPI(title="Document Extractor API" )
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://192.168.2.72:3000","http://localhost:3000"],
+    allow_origins=["http://192.168.2.72:3000","http://localhost:3000","https://brsr-eight.vercel.app/"],
+    allow_credentials=True,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -475,6 +476,10 @@ def parse_brsr_text(json_merge):
     
     ]
   }
+@app.post("/hu")
+def postmy(name:str):
+    
+    return {"my Name is":name}
 
 @app.get("/k")
 def suman():
